@@ -1,0 +1,95 @@
+\usepackage{geometry}
+\geometry{
+a4paper,
+total={170mm,257mm},
+left=20mm,
+top=20mm,
+}
+\setlength\parindent{0pt} % get rid of the stupid indent
+
+% INCLUDE PACKAGES
+
+\usepackage[utf8]{inputenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\usepackage[colorlinks=true, linkcolor=Cyan]{hyperref}
+\usepackage{ragged2e}
+\usepackage{cancel} % used to cancel out numbers in maths mode.
+\usepackage{amssymb} % gives more maths symbols
+\usepackage{enumitem} % gives ability to have different enumerate bullets.
+\usepackage{multirow}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Montserrat}
+\setsansfont[Ligatures=TeX]{Poppins Bold}
+\usepackage[raggedright,bf,sf]{titlesec}
+
+\setcounter{tocdepth}{0}
+\renewcommand{\chaptername}{Section}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{0.4pt}
+\addtolength{\topmargin}{-1.59999pt} % This and line below changes margins to accomondate for headers and footers
+\setlength{\headheight}{13.59999pt}
+
+% NOW CREATE TITLE PAGE
+
+\newcommand{\bookTitle}[4]{
+    \begin{titlepage} % Suppresses headers and footers on the title page
+	
+        \centering % Centre everything on the title page
+        
+        \rule{\textwidth}{0pt} % Thick horizontal rule
+        
+        \vspace{0.3\textheight} % Whitespace between the top rules and title
+        
+        % \rule{\textwidth}{1pt}\\
+        \vspace{15pt}
+        {\LARGE \textbf{VENTURER CAMP 2023}}\\[1em] % Title line 1
+        %{\Large - }\\[0.5\baselineskip] % Title line 2
+        {\LARGE #1} \\[15pt]% Title line 3
+    
+        {\large #2 \\[5em]}
+    
+        {\large #3} % Date
+        \vspace{15pt}
+        % \rule{\textwidth}{1pt}
+        \vspace{3em}
+        %\vfill % Whitespace between the author name and publisher
+        
+        
+        \begin{figure}[H]
+            \begin{minipage}{0.45\textwidth}
+                \centering
+                \includegraphics[width=0.45\textwidth]{../wcf.png} %this will be replaced with vc23 logo when we have one
+            \end{minipage}\hfill
+            \begin{minipage}{0.45\textwidth}
+                \centering
+                \includegraphics[width=0.45\textwidth]{../wcf.png}
+            \end{minipage}
+        \end{figure}
+    
+        \vfill  
+        
+    \end{titlepage}
+
+    \fancyhead[L]{#1}
+    \fancyfoot[L]{#4}
+}
+
+
+% include header footer on new chapter pages by redefining \chapter command
+\makeatletter
+\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+\thispagestyle{fancy}%
+\global\@topnum\z@
+\@afterindentfalse
+\secdef\@chapter\@schapter}
+\makeatother
