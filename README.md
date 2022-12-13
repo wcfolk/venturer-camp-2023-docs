@@ -12,7 +12,6 @@ The template below should be used for all documents produced. The `\section{Intr
 
 \input{../global-preamble.tex}
 
-
 \begin{document}
     \bookTitle{Template Document}{Subtitle}{6th December 2022}{template}
     \tableofcontents

@@ -15,12 +15,14 @@ top=20mm,
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{fontawesome}
-\usepackage[colorlinks=true, linkcolor=Cyan]{hyperref}
+\usepackage[colorlinks=true, linkcolor=Magenta, breaklinks=true]{hyperref}
 \usepackage{ragged2e}
 \usepackage{cancel} % used to cancel out numbers in maths mode.
 \usepackage{amssymb} % gives more maths symbols
 \usepackage{enumitem} % gives ability to have different enumerate bullets.
 \usepackage{multirow}
+
+\usepackage{longtable}
 
 \usepackage{fontspec}
 \setmainfont[Ligatures=TeX]{Montserrat}
@@ -81,7 +83,7 @@ top=20mm,
     \end{titlepage}
 
     \fancyhead[L]{#1}
-    \fancyfoot[L]{#4}
+    \fancyfoot[L]{\footnotesize{\texttt{#4}}}
 }
 
 
