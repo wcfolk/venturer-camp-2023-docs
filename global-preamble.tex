@@ -75,7 +75,7 @@ top=20mm,
             \begin{minipage}{0.45\textwidth}
                 \centering
                 \includegraphics[width=0.45\textwidth]{../wcf.png}
-            \end{minipage}
+            \end{minipage}\hfill
         \end{figure}
     
         \vfill  
@@ -86,6 +86,26 @@ top=20mm,
     \fancyfoot[L]{\footnotesize{\texttt{#4}}}
 }
 
+\newcommand{\backPage}{
+    \begin{titlepage}
+        \centering
+        \rule{\textwidth}{0pt}
+        \vfill
+        \begin{figure}[H]
+            \begin{minipage}{0.45\textwidth}
+                \begin{flushright}
+                \includegraphics[width=0.1\textwidth]{../wcf.png} %this will be replaced with vc23 logo when we have one
+                \end{flushright}
+            \end{minipage}\hfill
+            \begin{minipage}{0.45\textwidth}
+                \includegraphics[width=0.1\textwidth]{../wcf.png}
+            \end{minipage}\hfill
+        \end{figure}
+        \rule{\textwidth}{2pt}
+        \small{Venturer Camp 2023, a project by \href{https://woodcraft.org.uk}{Woodcraft Folk}, will bring together 13-17 year olds from across the UK to camp together and live by the Woodcraft Folk values for a week in the summer of 2023.\\
+        Check out our website (\href{https://venturercamp.org.uk}{venturercamp.org.uk}) and our social media pages for more information.}
+    \end{titlepage}
+}
 
 % include header footer on new chapter pages by redefining \chapter command
 \makeatletter
