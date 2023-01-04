@@ -29,8 +29,20 @@ top=20mm,
 \setsansfont[Ligatures=TeX]{Poppins Bold}
 \usepackage[raggedright,bf,sf]{titlesec}
 
+% formatting of header/footer and table of contents if the documentclass is an article. This gets ignored if documentclass is article.
+\makeatletter
+\@ifclassloaded{report}{%
 \setcounter{tocdepth}{0}
 \renewcommand{\chaptername}{Section}
+\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+\thispagestyle{fancy}%
+\global\@topnum\z@
+\@afterindentfalse
+\secdef\@chapter\@schapter}
+}
+\makeatother
+
+
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -86,6 +98,29 @@ top=20mm,
     \fancyfoot[L]{\footnotesize{\texttt{#4}}}
 }
 
+\newcommand{\shortTitle}[4]{
+        
+ 
+        \begin{figure}[H]
+            \begin{minipage}{0.65\textwidth}
+                {\LARGE \textbf{VENTURER CAMP 2023}}\\[1em] % Title line 1
+                %{\Large - }\\[0.5\baselineskip] % Title line 2
+                {\LARGE #1} \\[1em]% Title line 3
+            
+                {\large #2 \\[1em]}
+            
+                {\large #3} % Date
+            \end{minipage}\hfill
+            \begin{minipage}{0.3\textwidth}
+                \centering
+                \includegraphics[width=0.9\textwidth]{../vc23.png}
+            \end{minipage}\hfill
+        \end{figure}
+
+    \fancyhead[L]{#1}
+    \fancyfoot[L]{\footnotesize{\texttt{#4}}}
+}
+
 \newcommand{\backPage}{
     \begin{titlepage}
         \centering
@@ -107,11 +142,7 @@ top=20mm,
     \end{titlepage}
 }
 
-% include header footer on new chapter pages by redefining \chapter command
-\makeatletter
-\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
-\thispagestyle{fancy}%
-\global\@topnum\z@
-\@afterindentfalse
-\secdef\@chapter\@schapter}
-\makeatother
+% % include header footer on new chapter pages by redefining \chapter command
+% \makeatletter
+
+% \makeatother
