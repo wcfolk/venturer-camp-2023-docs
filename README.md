@@ -6,7 +6,7 @@ Each document should have a folder made within the root of the repository for it
 Within each of the folders, any additional resources for the document as well as the `.tex` can be stored. The final `.pdf` file should also be left in here.
 
 ## Template
-The template below should be used for all documents produced. The `\section{Introduction}` and line below should be replaced with the contents of the document.
+The template below should be used for all documents produced. The `\section{Introduction}` and line below should be replaced with the contents of the document. The `\backpage` command provides a back page to the document which includes links to the Woodcraft & Venturer Camp websites and some basic information about the project.
 ```tex
 \documentclass[a4paper, 11pt]{report}
 
@@ -18,5 +18,6 @@ The template below should be used for all documents produced. The `\section{Intr
     \chapter{Introduction}
     ...
 
+    \backPage
 \end{document}
 ```

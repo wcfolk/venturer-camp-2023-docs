@@ -2,12 +2,25 @@
 
 \input{../global-preamble.tex}
 
+\usepackage{pdfpages}
+
 
 \begin{document}
-    \bookTitle{Booking Handbook}{Subtitle}{\today}{booking-handbook}
+    \bookTitle{Booking Handbook}{An introduction to the Venturer Camp 2023 Booking System}{27th January 2023}{booking-handbook}
     \tableofcontents
+    \input{chapters/introduction.tex}
     \input{chapters/stage-apply.tex}
     \input{chapters/stage-book.tex}
+    \input{chapters/stage-edit.tex}
+
+    \part*{Appendicies}
+    \addcontentsline{toc}{part}{Appendicies}
+    \appendix
+    
+
+    \chapter{Template Booking Form}
+    A template booking form has been produced which group leaders are able to use to collect information about those in their group before inputting it into the booking system. It has been included overleaf for reference only, a editable copy is available to download from \href{https://venturercamp.org.uk/book}{\texttt{venturercamp.org.uk/book}}.
+    \includepdf[pagecommand={\pagestyle{fancy}}, scale=0.8, pages=-, frame]{assets/template-form.pdf}
 
     \backPage
 \end{document}
