@@ -42,7 +42,18 @@ top=20mm,
 }
 \makeatother
 
+% remove hyphenation at end of line
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
 
+% better table padding
+\renewcommand{\arraystretch}{1.6}
+
+% redefine \today to become yyyy-mm-dd format for use in the footer to show export date
+\usepackage[yyyymmdd]{datetime}
+\renewcommand{\dateseparator}{-}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -95,7 +106,7 @@ top=20mm,
     \end{titlepage}
 
     \fancyhead[L]{#1}
-    \fancyfoot[L]{\footnotesize{\texttt{#4}}}
+    \fancyfoot[L]{\footnotesize{\texttt{#4}\\\texttt{\today}}}
 }
 
 \newcommand{\shortTitle}[4]{
@@ -118,9 +129,10 @@ top=20mm,
         \end{figure}
 
     \fancyhead[L]{#1}
-    \fancyfoot[L]{\footnotesize{\texttt{#4}}}
+    \fancyfoot[L]{\footnotesize{\texttt{#4}\\\texttt{\today}}}
 }
 
+% command for back page of longer documents
 \newcommand{\backPage}{
     \begin{titlepage}
         \centering
@@ -136,13 +148,12 @@ top=20mm,
                 \includegraphics[width=0.1\textwidth]{../wcf.png}
             \end{minipage}\hfill
         \end{figure}
-        \rule{\textwidth}{2pt}
+        
         \small{Venturer Camp 2023, a project by \href{https://woodcraft.org.uk}{Woodcraft Folk}, will bring together 13-17 year olds from across the UK to camp together and live by the Woodcraft Folk values for a week in the summer of 2023.\\
         Check out our website (\href{https://venturercamp.org.uk}{venturercamp.org.uk}) and our social media pages for more information.}
+        \rule{\textwidth}{2pt}
+        \footnotesize{Woodcraft Folk is a registered charity in England \& Wales (1148195) and in Scotland (SC039791), and a limited company, registered in England \& Wales (8133727). Registered office: Holyoake House, Hanover Street, Manchester M60 0AS}
     \end{titlepage}
 }
 
-% % include header footer on new chapter pages by redefining \chapter command
-% \makeatletter
 
-% \makeatother
