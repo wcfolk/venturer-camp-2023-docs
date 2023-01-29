@@ -1,12 +1,16 @@
 \documentclass[a4paper, 11pt]{report}
 
 \input{../global-preamble.tex}
+\usepackage{pdfpages}
 
 \begin{document}
-    \bookTitle{Report to General Council}{For February 2023 meeting}{Saturday 4th February 2023}{gc-paper-feb23}
+    \begin{titlepage}
+    \includepdf[pagecommand={\pagestyle{empty}}, scale=1, pages=-, frame]{sections/cover-sheet.pdf}
+    \end{titlepage}
+    \bookTitle{Report to General Council}{For February 2023 meeting}{February 2023}{gc-paper-feb23}
     \ 
     \vfill
-    This paper has been written to give an overview of where the Venturer Camp 2023 Project is currently. As of writing it, I'm not sure how long it will end up being. If any questions arise or you want more information on anything discussed, please do not hesitate to contact me via email.\\[1em]
+    This paper has been written to give an overview of where the Venturer Camp 2023 Project is currently. If any questions arise or you want more information on anything discussed, please do not hesitate to contact me via email.\\[1em]
     Thomas Boxall\\
     \textit{Venturer Camp 2023 Coordinator}\\[1em]
     \today
@@ -17,6 +21,8 @@
     \input{sections/team-update.tex}
     \input{sections/budget.tex}
     \input{sections/bookings.tex}
+    \input{sections/upcoming-events.tex}
+    \input{sections/individual-team-updates.tex}
 
     \backPage
 \end{document}
