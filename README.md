@@ -5,13 +5,6 @@
 Each document should have a folder made within the root of the repository for it to live in. This folder should be named the document ID. Document IDs should be short names for the document, which should not contain spaces. For example `village-handbook` or `info-pack-v0`.   
 Within each of the folders, any additional resources for the document as well as the `.tex` can be stored. The final `.pdf` file should also be left in here.
 
-## Document Index
-{% assign doclist = site.pages | sort: 'url' %}
-
-{% for doc in doclist %} {% if doc.name contains '.pdf' %}
-* {{ doc.dir | url_decode }}{{ doc.name }}
-{% endif %} {% endfor %}
-
 ## Template
 There are two different types of template, one for longer form documents where chapters are used (using the `report` document class) and one for shorter form documents, where chapters are not required (using the `article` document class).
 ## Long Template
