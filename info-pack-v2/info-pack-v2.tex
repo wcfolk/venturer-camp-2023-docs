@@ -7,6 +7,8 @@
 \input{../global-preamble.tex}
 
 \usepackage{ragged2e}
+\usepackage{longtable}
+\usepackage{multicol}
 
 \newcommand{\nl}{\newline}
 \newcommand{\infoemail}{\href{mailto:info@venturercamp.org.uk}{\texttt{info@venturercamp.org.uk}}}
@@ -403,12 +405,17 @@ The on-camp-currency will be able to be purchased using either cash or card, we 
 
 The on camp currency will be able to be used in the cafe and the shop to purchase refreshments and merchandise. An approximate price list is available below.
 
-\begin{table}[H]
-    \centering
-    {\RaggedRight
-    \begin{tabular}{p{0.5\textwidth}p{0.3\textwidth}}
+{\RaggedRight \centering
+\begin{longtable}{p{0.5\textwidth}p{0.3\textwidth}}
         \textbf{Product} & \textbf{Price}\\
         \hline
+        \endhead
+
+        \multicolumn{2}{r}{\footnotesize\itshape Continued on next page}\\
+        \endfoot 
+        
+        \endlastfoot
+
         Pot coffee & 0.50\\
         Nice coffee & 1.00\\
         Nice decaf coffee & 1.00\\
@@ -430,10 +437,9 @@ The on camp currency will be able to be used in the cafe and the shop to purchas
         Toasties & 1.00\\
         Fabled Oats & 1.50\\
         \hline
-    \end{tabular}
-    }% end of \RaggedRight
     \caption{Approximate Cafe price list}
-\end{table}
+\end{longtable}
+}% end of \RaggedRight
 The cafe might also offer better value deals - watch this space!
 \begin{table}[H]
     \centering
