@@ -8,7 +8,7 @@
 
 \usepackage{ragged2e}
 \usepackage{longtable}
-\usepackage{multicol}
+\usepackage{multicol, multirow}
 
 \newcommand{\nl}{\newline}
 \newcommand{\infoemail}{\href{mailto:info@venturercamp.org.uk}{\texttt{info@venturercamp.org.uk}}}
@@ -191,60 +191,67 @@ A few Woodcraft Folk districts and Biblins are very kindly lending us their kit 
 We are still finalising the village equipment and will have this confirmed before June 30th. 
 
 \section{Village Composition}
-\subsection{Asgard - pitches 1a, 1b \& 2a}
-\begin{itemize}
-    \item Newham Watersmeet
-    \item Cambridge
-    \item St Albans
-    \item Eastern Region
-    \item Sheffield Derwent
-    \item Sheffield Porter \& Don
-    \item Birkenhead
-\end{itemize}
-\subsection{Benben - pitches 2b, 3a \& 3b}
-\begin{itemize}
-    \item Clapham
-    \item Highgate \& Holloway
-    \item Teddington
-    \item New Barnet
-    \item Camps For All
-    \item Banbury
-    \item Stroud
-    \item Food Team
-    \item Woodcraft Folk Staff
-    \item International Volunteers
-\end{itemize}
-\subsection{Camelot - pitches 6 and 7}
-\begin{itemize}
-    \item Lewisham \& Greenwich
-    \item Exeter
-    \item Brighton \& Hove Central
-    \item Watford
-    \item Eastbourne
-    \item Tyne
-    \item Leeds
-    \item Coach Coordinators
-    \item Camp Coordinators
-\end{itemize}
-\subsection{Dinas Affaraon - pitches 7 - 9}
-\begin{itemize}
-    \item Oxford
-    \item Hackney
-    \item Brighthelmstone
-    \item Bath
-    \item MEST-UP Centre Team
-    \item Adult Volunteers
-\end{itemize}
-\subsection{Elysium - pitches 9 \& 10}
-\begin{itemize}
-    \item Scotland
-    \item Machynlleth
-    \item Cardiff
-    \item Manchester
-    \item Southampton
-    \item Ealing
-    \item Bromley
-\end{itemize}
+{\RaggedRight \centering
+\begin{longtable}{p{0.2\textwidth} p{0.2\textwidth} p{0.5\textwidth}}
+    \textbf{Name} & \textbf{Pitch} & \textbf{Containing}\\
+        \hline
+        \endhead
+
+        \multicolumn{3}{r}{\footnotesize\itshape continued on next page}\\
+        \endfoot 
+        
+        \endlastfoot
+        \multirow{6}{*}{Asgard} & \multirow{6}{*}{1a, 1b \& 2a} & Newham Watersmeet\\*
+        & & Cambridge\\*
+        & & St Albans\\*
+        & & Eastern Region\\*
+        & & Sheffield Derwent\\*
+        & & Birkenhead\\
+        \hline
+
+        \multirow{10}{*}{Benben} & \multirow{10}{*}{2b, 3a \& 3b} & Clapham\\*
+        & &  Highgate \& Holloway \\*
+        & &  Teddington \\*
+        & &  New Barnet \\*
+        & &  Camps For All \\*
+        & &  Banbury \\*
+        & &  Stroud \\*
+        & &  Food Team \\*
+        & &  Woodcraft Folk Staff \\*
+        & &  International Volunteers \\*
+        \hline
+
+        \multirow{9}{*}{Camelot} & \multirow{9}{*}{6 \& 7} & Lewisham \& Greenwich\\*
+        & & Exeter \\*
+        & & Brighton \& Hove Central \\*
+        & & Watford \\*
+        & & Eastbourne \\*
+        & & Tyne \\*
+        & & Leeds \\*
+        & & Coach Coordinators \\*
+        & & Camp Coordinators \\
+        \hline
+
+        \multirow{6}{*}{Dinas Affaraon} & \multirow{6}{*}{7 - 8} & Oxford\\*
+        & & Hackney \\*
+        & & Brighthelmstone \\*
+        & & Bath \\*
+        & & MEST-UP Centre Team \\*
+        & & Adult Volunteers \\
+        \hline
+
+        \multirow{7}{*}{Elysium} & \multirow{7}{*}{9 \& 10} & Scotland\\*
+        & & Machynlleth \\*
+        & & Cardiff \\*
+        & & Manchester \\*
+        & & Southampton \\*
+        & & Ealing \\*
+        & & Bromley \\
+        \hline
+
+\caption{Village names, pitches and contained groups}
+\end{longtable}
+}
 
 \section{Village Roles}
 Each village will need to identify individuals (or teams, we would recommend every role nominates a Deputy) to take on the following roles:
