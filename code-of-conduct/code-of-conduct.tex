@@ -1,5 +1,9 @@
 \documentclass[a4paper, 11pt]{report}
 
+\usepackage{draftwatermark}
+\SetWatermarkText{\textbf{PROOF}}
+\SetWatermarkScale{1}
+
 \input{../global-preamble.tex}
 
 \renewcommand*{\theenumi}{\thechapter.\arabic{enumi}}
@@ -21,19 +25,24 @@
 
 \setcounter{chapter}{-1}
 
+\usepackage{enumitem}
+\setenumerate{labelsep=1.5em}% Uncomment for global settings, applied to all enumerated lists
+\def\enumMarginIndentOne{4em}
+\def\enumMarginIndentTwo{5em}
+
 \begin{document}
     \bookTitle{Code of Conduct}{Subtitle}{PICK A DATE}{code-of-conduct}
     \tableofcontents
     \chapter{Introduction}
     \begin{enumerate}
         \item Definitions
-        \begin{enumerate}
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
             \item ``Participant'' - anyone under the age of 18 who is not attending as a volunteer and as such has paid the participant price.
             \item ``Volunteer'' - anyone aged 16, 17 or 18+ who is attending Venturer Camp as a volunteer and as such has paid the volunteer price.
         \end{enumerate}
         \item This Code of Conduct applies to all participants, volunteers and Woodcraft Folk members of staff attending, or who will be present on site at Venturer Camp 2023.
         \item See below for a list of relevant Woodcraft Folk Policies. These should be read in conjunction with this document. These policies are to be adhered to by everyone on site.
-        \begin{enumerate}
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
             \item \href{https://woodcraft.org.uk/resources/safeguarding-policy/}{Safeguarding Policy}
             \item \href{https://woodcraft.org.uk/resources/health-safety-policy/}{Health, Safety \& Wellbeing Policy}
             \item \href{https://woodcraft.org.uk/resources/volunteering-policy/}{Volunteering Policy}
@@ -51,7 +60,7 @@
         \item Before sharing any intimate behaviour with another person (for example: hugs; sexual acts; or holding hands), you must have explicit consent.
         \item \textit{Consent} means positive affirmation.
         \item Consent is necessary for \textit{each and every} act. 
-        \begin{enumerate}
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
             \item ``No'' means no.
             \item Only ``yes'' means yes.
             \item The affirmation must be explicit and non-coercive.
@@ -61,13 +70,13 @@
         \item Threatening and/or coaxing people into saying ``yes'' does not count as getting consent.
         \item A person can change their mind and withdraw consent at any time, this must be respected.
         \item If someone is intoxicated, or otherwise, they cannot consent.
-        \begin{enumerate}
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
             \item If you are under the influence of intoxicating substances, you must still get consent.
             \item You will be held equally responsible for your actions whether you are sober or otherwise.
         \end{enumerate}
         \item Contraceptive products will be available for anyone of any age along with advice around safe sex practices. 
         \item We encourage attendees to look out for each other.
-        \begin{enumerate}
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
             \item Don't be afraid to check in with someone and clarify if they are alright.
             \item If you are concerned about someone then contact:  your group leader; any adult you trust; a steward; village coordinator or member of the coordinating team.
         \end{enumerate}
@@ -78,24 +87,24 @@
     \chapter{Respect}
     \begin{enumerate}
         \item Respect for each other
-        \begin{enumerate}
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
             \item Woodcraft Folk aims to create a safe and inclusive space for all.
             \item Discrimination of anyone will not be tolerated.
             \item Everyone is to be viewed as equal and differences between us are to be respected. 
         \end{enumerate}
         \item Respect other people's privacy \& personal property
-        \begin{enumerate}
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
             \item Do not share photos/ videos of participants without their explicit permission. 
             \item We will have camp photographers who will be documenting the camp officially. 
             \item If you are unhappy with being photographed, please speak to the on-shift coordinator at the earliest opportunity.
             \item Do not enter other people's personal space (ie their sleeping tent) without their consent.
         \end{enumerate}
         \item Respect the site
-        \begin{enumerate}
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
             \item Leave the site as you find it, if not in a better condition.
             \item Use the designated red waste and recycling bins for your village's waste
             \item Do not damage the facilities on site, this includes, but is not limited to: 
-            \begin{enumerate}
+            \begin{enumerate}[leftmargin=\enumMarginIndentTwo]
                 \item permanent buildings
                 \item temporary structures
                 \item equipment borrowed from districts
@@ -104,16 +113,161 @@
             \item Any equipment taken to the site for camp will need to be removed from the site at the end of camp regardless of if it is broken or not.
         \end{enumerate}
         \item Respect for others
-        \begin{enumerate}
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
             \item Everyone on site should show respect and consideration for other participants, volunteers (including stewards) and Woodcraft Folk staff
             \item Everyone on site should show respect to organised visitors on site
             \item Everyone on site should show respect to members of the public who are using the footpath which crosses through the site. This means do not heckle them, cause distress to them or attempt to block their path.
         \end{enumerate}
         \item Respect for other Village's space
-        \begin{enumerate}
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
             \item When travelling through the site, do not cross through other village's space. Use the footpath which runs along the length of the site
             \item When entering \& exiting villages (either your own or another person's), do so at their ``gate'' or through a large clearing in tents. Do not force your way through small gaps between tents where guy ropes are positioned.
         \end{enumerate}
+    \end{enumerate}
+
+
+    \chapter{Day Scheduling}
+    \begin{enumerate}
+        \item The Venturer Camp coordination team encourages everyone to check in with their villages regularly and emphasise the importance of getting enough sleep to fully enjoy the camp.
+        \item Villages should set appropriate bedtimes for all participants.
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item They may divide participants into multiple age groups, however this is discouraged.
+        \end{enumerate}
+        \item A `Morning Circle' will be held each morning in each village.
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item The time of this is at the discretion of the Village Coordinators, this should be decided before camp.
+            \item Everyone camping in the village will attend the morning circle. This is an important mechanism for checking in with both participants and volunteers.
+            \item Morning Circle should not be held until after the Village Coordinators Meeting.
+            \item If you are unable to attend the morning circle then you should inform your village coordinator at the earliest possible opportunity. 
+        \end{enumerate}
+        \item Central programme is organised on alternate evenings.
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item On Saturday 5th, Monday 7th and Wednesday 9th August, the central evening programme will finish at 23:30.
+            \begin{enumerate}[leftmargin=\enumMarginIndentTwo]
+                \item At this point most programme including all amplified music will end.
+                \item Volunteers will be able to stay in the central area until 01:00 if they choose to, the main marquee will be open for low-key gatherings until then.
+            \end{enumerate}
+            \item On Friday 11th August, the central evening programme will finish at 01:00.
+            \begin{enumerate}[leftmargin=\enumMarginIndentTwo]
+                \item At this point, all programme including all amplified music will end. 
+                \item The main marquee will close once all central programme has finished, volunteers should return to their villages at this time.
+            \end{enumerate}
+            \item On the nights not listed above, there may be some low-key central programme organised
+            \item On any night there is central program organised, the central area will close to everyone at 01:00. 
+        \end{enumerate}
+        \item Sign in is between 22:00 and 22:30 on all nights.
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item On central programme nights, the programme will stop for half an hour.
+            \item On village programme nights, villages do not have to stop programme however this is suggested to allow for an efficient sign-in.
+            \item During sign-in, participants should return to their villages where their leader or a designated volunteer should sign them in. The volunteer responsible for sign in should be made known to the participants in advance of sign in.
+        \end{enumerate}
+        \item No amplified music should be played in villages after 22:00.
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item Campfires, chatting and singing in villages should happen with respect for the needs of others in your own and neighbouring villages.
+        \end{enumerate}
+        \item Quiet hours on site are from 23:30 to 08:00.
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item During these hours, no noise, including amplified music, is permitted anywhere on site.
+            \item Anyone travelling around the site at this time should do so quietly and avoid moving close to villages.
+            \item No `morning cry' before 08:00
+        \end{enumerate}
+    \end{enumerate}
+
+    \chapter{Cooperation \& Clan Expectations}
+    \begin{enumerate}
+        \item Villages are expected to cooperate with the central coordination team.
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item This includes but is not limited to
+            \begin{enumerate}[leftmargin=\enumMarginIndentTwo]
+                \item Food Team
+                \item Programme Team
+                \item Site Services Team
+                \item Coordination and Event Administration Team
+            \end{enumerate}
+            \item The central coordination team will make themselves available to villages should questions or issues arise.
+        \end{enumerate}
+        \item All participants of the camp and all volunteers, unless it would conflict with their village or camp-wide role, should be assigned a clan.
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item Their attendance to clan should be monitored and where needed clan attendance should be enforced.
+            \item Clans are expected to help and take part around their village
+            \item Clans are expected to help and take part with central teams, where rota'd. 
+        \end{enumerate}
+        \item Participants are encouraged to participate in both village and central activities to make the most of Venturer Camp. 
+    \end{enumerate}
+
+    \chapter{Leaving Site}
+    \begin{enumerate}
+        \item Participants are encouraged to remain on site where possible to fully take part in the camp.
+        \item Participants are only allowed to leave the site if they have been given explicit permission by their leader.
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item They must be accompanied by at least two other people (this can be participants or volunteers).
+            \item They should return to the site by no later than 18:00.
+            \item If participants haven't returned by this time and haven't signed back in then the stewards will be informed.
+        \end{enumerate}
+        \item Volunteers are permitted to leave site at any time it is deemed necessary.
+        \item Anyone leaving site must sign out at the camp office before leaving site.
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item This includes groups going off-site for a structured activity.
+            \item Participants must be signed out by their leader.
+            \item They must leave a contact telephone number; their purpose for leaving site; and an estimated return time. 
+            \item While off site, everyone is representing Woodcraft Folk and as such should act accordingly. 
+            \item As soon as you return to site, you must sign back in at the camp office. 
+        \end{enumerate}
+        \item Anyone leaving site should not abandon responsibility (included but not limited to: clan, being on-shift, leading activities) without good reason. This reason should be communicated to the person overseeing that activity when seeking permission to leave site
+        \item There must be enough leaders on site at all times, volunteers need to consider this before leaving site. During a typical group night session, Woodcraft Folk's minimum ratio for supervision of venturers is 1 adult for every 10 young people with a minimum of 2 total leaders. We recommend that each group has at least 3 leaders, since camp is effectively non-stop for 7 days. However please consider the needs of your group and plan accordingly.
+    \end{enumerate}
+
+    \chapter{Intoxicating Substances (Drugs \& Alcohol)}
+    \begin{enumerate}
+        \item Venturer Camp 2023 takes place within the UK under UK law. Anyone on site is expected to comply with UK legislation.
+        \item Safety is the most important thing, look after yourself and each other.
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item If you are concerned about someone then contact:  your group leader; any adult you trust; a steward; village coordinator or member of the coordinating team.
+            \item If anyone is found drunk or intoxicated due to drug or alcohol consumption then the primary concern will be for their health. They should be escorted back to the village and handed over to a leader who should take care of the individual. Where this is not possible, the Head Steward should be informed and they will provide support until the person is in a fit state to return to their bed or take further medical action as required.
+        \end{enumerate}
+        \item Intoxication is not an excuse for bad behaviour
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item Adults should be aware of the fact that they may be sent home from the event if they behave in a drunk and disorderly manner. 
+        \end{enumerate}
+        \item Alcohol can only be consumed by those aged 18 or over.
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item Under-18s found with alcohol will have it confiscated. 
+            \item No alcohol is to be consumed in the central area.
+            \item Alcohol under 15\% ABV may be consumed in villages, if the village decides to permit it.
+            \item If adult volunteers choose to consume alcohol, villages must ensure that there are sufficient leaders sober, to respond in an emergency. One of these should ideally be able to drive and have a vehicle on site.
+            \item Alcohol should be stored securely in a locked vehicle.
+            \item If a person aged 18 or over is found to be supplying under 18s with alcohol, they should be immediately reported to the on shift coordinator.
+            \item Alcohol may be consumed, if the village deems appropriate, from the end of the news. However, villages should consider that adults must model a good relationship with alcohol and being at Venturer Camp is not an excuse to drink excessively every night.
+        \end{enumerate}
+        \item Smoking and vaping is only allowed in the designated smoking areas.
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item The ends of used cigarettes should be extinguished then disposed of properly in the correct bin. This will be made clear in the smoking areas.
+            \item E-Cigarettes should be disposed of using the correct bin. 
+            \item Adults must not supply those aged under 18 with cigarettes or e-cigarettes.
+        \end{enumerate}
+        \item Substances which are illegal outside of Venturer Camp will remain illegal at Venturer Camp. Psychoactive substances are also not permitted at Venturer Camp.
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item If anyone is found to be in possession of, using, or supplying illegal or psychoactive substances, this should be escalated to the On-Shift Coordinator and On-Shift Safeguarding Lead. 
+        \end{enumerate}
+    \end{enumerate}
+
+    \chapter{Breaches of these Guidelines}
+    \begin{enumerate}
+        \item If you have any problems on camp or feel that any of these guidelines have been breached by participants or volunteers, you should speak to your leader/ village coordinator/ member of the Coordination Team/ a trusted volunteer on site.
+        \item Anyone you speak to should escalate concerns to the Safeguarding \& Grievances Panel/ On-Shift Coordinator and on-shift Safeguarding Lead as deemed appropriate.
+        \item Breaching these guidelines may result in consequences. These may be, but not limited to:
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item Verbal Warning
+            \item Talking to leaders
+            \item Talking to parents off-site
+            \item Removal from the site
+            \item Contacting the police
+        \end{enumerate}
+        \item Decisions taken by the on-shift coordinator in conjunction with the Safeguarding \& Grievances Panel are final.
+        \begin{enumerate}[leftmargin=\enumMarginIndentOne]
+            \item Individuals have the right to appeal using the standard Woodcraft Folk procedures, after camp is complete.
+        \end{enumerate}
+        \item The coordination team will keep a log of every incident referred to them, along with the action taken. 
     \end{enumerate}
 
     \backPage
