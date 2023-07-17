@@ -49,6 +49,9 @@ top=20mm,
 \hyphenpenalty=10000
 \hbadness=10000
 
+% command to set links to black for printed docs
+\newcommand{\printCopy}{\hypersetup{hidelinks}}
+
 % better table padding
 \renewcommand{\arraystretch}{1.6}
 
@@ -110,6 +113,50 @@ top=20mm,
     \fancyfoot[L]{\footnotesize{\texttt{#4}\\\texttt{\today}}}
 }
 
+% BLACK AND WHITE TITLE PAGE FOR PRINTED DOCS
+\newcommand{\bookTitlebw}[4]{
+    \begin{titlepage} % Suppresses headers and footers on the title page
+	
+        \centering % Centre everything on the title page
+        
+        \rule{\textwidth}{0pt} % Thick horizontal rule
+        
+        \vspace{0.3\textheight} % Whitespace between the top rules and title
+        
+        % \rule{\textwidth}{1pt}\\
+        \vspace{15pt}
+        {\LARGE \textbf{VENTURER CAMP 2023}}\\[1em] % Title line 1
+        %{\Large - }\\[0.5\baselineskip] % Title line 2
+        {\LARGE #1} \\[15pt]% Title line 3
+    
+        {\large #2 \\[5em]}
+    
+        {\large #3} % Date
+        \vspace{15pt}
+        % \rule{\textwidth}{1pt}
+        \vspace{3em}
+        %\vfill % Whitespace between the author name and publisher
+        
+        
+        \begin{figure}[H]
+            \begin{minipage}{0.45\textwidth}
+                \centering
+                \includegraphics[width=0.45\textwidth]{../vc23-bw.png} %this will be replaced with vc23 logo when we have one
+            \end{minipage}\hfill
+            \begin{minipage}{0.45\textwidth}
+                \centering
+                \includegraphics[width=0.45\textwidth]{../wcf-bw.png}
+            \end{minipage}\hfill
+        \end{figure}
+    
+        \vfill  
+        
+    \end{titlepage}
+
+    \fancyhead[L]{#1}
+    \fancyfoot[L]{\footnotesize{\texttt{#4-print}\\\texttt{\today}}}
+}
+
 \newcommand{\shortTitle}[4]{
         
  
@@ -147,6 +194,30 @@ top=20mm,
             \end{minipage}\hfill
             \begin{minipage}{0.45\textwidth}
                 \includegraphics[width=0.1\textwidth]{../wcf.png}
+            \end{minipage}\hfill
+        \end{figure}
+        
+        \small{Venturer Camp 2023, a project by \href{https://woodcraft.org.uk}{Woodcraft Folk}, will bring together 13-17 year olds from across the UK to camp together and live by the Woodcraft Folk values for a week in the summer of 2023.\\
+        Check out our website (\href{https://venturercamp.org.uk}{venturercamp.org.uk}) and our social media pages for more information.}
+        \rule{\textwidth}{2pt}
+        \footnotesize{Woodcraft Folk is a registered charity in England \& Wales (1148195) and in Scotland (SC039791), and a limited company, registered in England \& Wales (8133727). Registered office: Holyoake House, Hanover Street, Manchester M60 0AS}
+    \end{titlepage}
+}
+
+% BLACK AND WHITE BACK PAGE FOR PRINTED DOCS
+\newcommand{\backPagebw}{
+    \begin{titlepage}
+        \centering
+        \rule{\textwidth}{0pt}
+        \vfill
+        \begin{figure}[H]
+            \begin{minipage}{0.45\textwidth}
+                \begin{flushright}
+                \includegraphics[width=0.1\textwidth]{../vc23-bw.png} %this will be replaced with vc23 logo when we have one
+                \end{flushright}
+            \end{minipage}\hfill
+            \begin{minipage}{0.45\textwidth}
+                \includegraphics[width=0.1\textwidth]{../wcf-bw.png}
             \end{minipage}\hfill
         \end{figure}
         
