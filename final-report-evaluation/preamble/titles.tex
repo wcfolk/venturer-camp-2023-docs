@@ -1,0 +1,125 @@
+% Venturer Camp 2023 Final Report & Evaluation Preamble (Titles)
+
+\newcommand{\drawhexagon}[5]{
+    % #1 - text
+    % #2 - position
+    % #3 - size
+    % #4 - rotation
+    % #5 - options
+    \node[rounded corners, inner sep=0, ultra thick, regular polygon, regular polygon sides=6, minimum size=#3, rotate=#4, #5] at (#2) {#1}
+}
+
+\newcommand{\drawtext}[5]{
+    % #1 - text
+    % #2 - position
+    % #3 - height
+    % #4 - rotation
+    % #5 - options
+    \node[left, bg, rounded corners, minimum width=\paperwidth, minimum height=#3, text width=\paperwidth, rotate=#4, #5] at (#2){#1}
+}
+
+\definecolor{accent}{HTML}{6d8f41}
+\colorlet{fg}{black}
+\colorlet{fgalt}{darkgray}
+\colorlet{fgacc}{black}
+\colorlet{bg}{white}
+\colorlet{bgalt}{lightgray}
+\colorlet{bgacc}{orange}
+\colorlet{border}{black}
+\colorlet{borderalt}{darkgray}
+\colorlet{borderacc}{orange}
+
+
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\textcolor{accent}{\thechapter\hspace{0.75em}}\textcolor{accent}{|}\hspace{0.75em}}{0pt}{\Huge\bfseries}
+\titleformat{\section}[hang]{\LARGE\bfseries}{\textcolor{accent}{\thesection\hspace{10pt}}\textcolor{accent}{}\hspace{0pt}}{0pt}{\LARGE\bfseries}
+\titleformat{\subsection}[hang]{\Large\bfseries}{\textcolor{accent}{\thesubsection\hspace{10pt}}\textcolor{accent}{}\hspace{0pt}}{0pt}{\Large\bfseries}
+\titleformat{\subsubsection}[hang]{\large\bfseries}{\textcolor{accent}{\thesubsubsection\hspace{10pt}}\textcolor{accent}{}\hspace{0pt}}{0pt}{\large\bfseries}
+
+
+\newcommand{\partTitlePage}{%
+  \begin{tikzpicture}[remember picture,overlay]
+
+    \pgfdeclarelayer{bg}    % declare background layer
+    \pgfdeclarelayer{fg}    % declare background layer
+    \pgfsetlayers{bg,main,fg}  % set the order of the layers (main is the standard layer)
+
+
+    \fill[bg] (current page.south west) rectangle (current page.north east);
+
+
+    \foreach \i in {0.5,...,20} {\drawhexagon{}{$(current page.north west)+(2.5,0)$}{\i cm}{0}{accent!60,draw};}
+
+
+    \foreach \i in {21,...,2} {\drawhexagon{}{$(current page.south east)+(-0.2,-0.45)$}{\i cm}{0}{accent!85,draw};}
+
+
+    \begin{pgfonlayer}{fg}
+    \drawtext{\Huge\\\Large\partname{} \thepart}{$(current page.center)+(7.2,-5.2)$}{3cm}{0}{text=fg,align=right};
+    \end{pgfonlayer}
+
+    \end{tikzpicture}%
+}
+
+% Customize the part page
+\usepackage{titlesec}
+\titleformat{\part}[display]
+  {\Huge\bfseries\filcenter}
+  {\partname{}\thepart}
+  {0pt}
+  {\partTitlePage\Huge\bfseries}
+
+
+% redefine \chapter so it uses pagestyle=fancy
+\makeatletter
+\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+\thispagestyle{fancy}%
+\global\@topnum\z@
+\@afterindentfalse
+\secdef\@chapter\@schapter}
+\makeatother
+
+
+\newcommand{\makeDocumentTitle}{%
+\begin{titlepage}
+    \pagestyle{empty}
+    \newgeometry{left=0cm,top=0cm,right=0cm,bottom=0cm}
+
+    \begin{tikzpicture}[remember picture,overlay]
+
+    %%%%%%%%%%%%%%%%%%%% Layers %%%%%%%%%%%%%%%%%%%%%%%%
+    \pgfdeclarelayer{bg}    % declare background layer
+    \pgfdeclarelayer{fg}    % declare background layer
+    \pgfsetlayers{bg,main,fg}  % set the order of the layers (main is the standard layer)
+
+    %%%%%%%%%%%%%%%%%%%% Background %%%%%%%%%%%%%%%%%%%%%%%%
+    \fill[bg] (current page.south west) rectangle (current page.north east);
+
+    %%%%%%%%%%%%%%%%%%%% Background Polygon %%%%%%%%%%%%%%%%%%%%
+
+    % top left
+    \foreach \i in {0.5,...,20} {\drawhexagon{}{$(current page.north west)+(2.5,0)$}{\i cm}{0}{accent!60,draw};}
+
+    % bottom left
+    \foreach \i in {2.5,...,22} {\drawhexagon{}{$(current page.west)+(2.5,-5)$}{\i cm}{0}{accent!60,draw};}
+
+    % center right
+    \foreach \i in {0.5,...,22} {\drawhexagon{}{$(current page.north east)+(0,-9.5)$}{\i cm}{0}{accent!90,draw};}
+
+    % bottom right
+    \foreach \i in {21,...,2} {\drawhexagon{}{$(current page.south east)+(-0.2,-0.45)$}{\i cm}{0}{accent!85,draw};}
+
+    %%%%%%%%%%%%%%%%%%%% Title + Subtitle %%%%%%%%%%%%%%%%%%%%
+    \drawtext{\Huge{\textbf{Final Report \& Evaluation}}\\\Large\textsc{Venturer Camp 2023}}{$(current page.center)+(3.2,-3.2)$}{3cm}{-60}{text=fg,align=right};
+
+    %%%%%%%%%%%%%%%%%%%% Author Name %%%%%%%%%%%%%%%%%%%%
+    \begin{pgfonlayer}{fg}
+    \drawtext{\Large\textsc{Woodcraft Folk}\\\Large\textsc{January 2023}}{$(current page.east)+(-0.5,-5.2)$}{2cm}{0}{text=fg,anchor=east,align=right};
+    \end{pgfonlayer}
+
+    %%%%%%%%%%%%%%%%%%%% Year %%%%%%%%%%%%%%%%%%%%
+    \drawhexagon{\Large }{$(current page.west)+(2.5,-5)$}{2.5 cm}{0}{accent!60,draw,text=fg};
+
+    \end{tikzpicture}
+    \restoregeometry
+\end{titlepage}
+}

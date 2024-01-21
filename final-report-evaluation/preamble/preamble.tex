@@ -1,0 +1,48 @@
+% Venturer Camp 2023 Final Report & Evaluation preamble
+
+
+% BASIC PAGE SETUP
+\usepackage{geometry}
+\geometry{
+a4paper,
+total={170mm,257mm},
+left=20mm,
+top=20mm,
+}
+\setlength\parindent{0pt} % get rid of the stupid indent
+
+% set toc depth to only show chapters
+\setcounter{tocdepth}{0}
+
+% use section numbering for everything up too and including subsubsection
+\setcounter{secnumdepth}{3}
+
+
+% PACKAGES
+
+\usepackage{tikz} % Required for drawing custom shapes
+\usetikzlibrary{arrows, backgrounds, calc, fit, math, mindmap, positioning, shapes, shapes.geometric, tikzmark}
+
+\usepackage{xcolor}
+
+\usepackage{pgffor}
+
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks=true, linkcolor=black]{hyperref}
+
+\usepackage{pgf-pie}
+
+% Headers and Footers
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Final Report \& Evaluation}
+\fancyhead[R]{Venturer Camp 2023}
+\fancyfoot[L]{}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\leftmark}
+\renewcommand{\footrulewidth}{0.4pt}
+\addtolength{\topmargin}{-1.59999pt}
+\setlength{\headheight}{13.59999pt}
