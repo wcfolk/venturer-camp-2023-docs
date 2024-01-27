@@ -7,6 +7,10 @@
 \SetWatermarkText{PROOF}
 \SetWatermarkScale{1}
 
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Montserrat}
+\setsansfont[Ligatures=TeX]{Montserrat}
+
 \begin{document}
 \makeDocumentTitle
 
@@ -47,26 +51,15 @@
     \input{chapters/6-on-camp-working.tex}
     \input{chapters/6-staff-support.tex}
     \input{chapters/6-concordia.tex}
+\part{Team Evaluations} % 7
+    \input{chapters/7-production-site-services.tex}
+    \input{chapters/7-programme.tex}
+    \input{chapters/7-food.tex}
+    \input{chapters/7-cafe-special-diets.tex}
+    \input{chapters/7-stewarding.tex}
+    \input{chapters/7-transport-logistics.tex}
+    \input{chapters/7-volunteer-support.tex}
+    \input{chapters/7-sustainability-decarbonisation.tex}
+    \input{chapters/7-finance.tex}
+    \input{chapters/7-coordinator.tex}
 \end{document}
-
-
-%table template
-\begin{table}[h]
-    \centering
-    {\RaggedRight
-    \begin{tabular}{p{0.2\textwidth} p{0.2\textwidth} p{0.2\textwidth} p{0.3\textwidth}}
-    \textbf{Name} & \textbf{Predecessor} & \textbf{Successor} & \textbf{Examples}\\
-    \hline
-    \hline
-    Linear & unique & unique & stack, queue\\
-    \hline
-    Hierarchical & unique & many & family tree, management structure\\
-    \hline
-    Graph & many & many & railway map, social network\\
-    \hline
-    Set Structure & no & no & DSALG class\\
-    \hline
-    \end{tabular}
-    } % end of rr     
-    \caption{Classifications of Data Structures}
-\end{table}
