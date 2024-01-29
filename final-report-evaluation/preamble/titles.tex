@@ -124,3 +124,43 @@
     \restoregeometry
 \end{titlepage}
 }
+
+\newcommand{\makeBackPage}{%
+\begin{titlepage}
+    
+    \begin{tikzpicture}[remember picture,overlay]
+
+    %%%%%%%%%%%%%%%%%%%% Layers %%%%%%%%%%%%%%%%%%%%%%%%
+    \pgfdeclarelayer{bg}    % declare background layer
+    \pgfdeclarelayer{fg}    % declare background layer
+    \pgfsetlayers{bg,main,fg}  % set the order of the layers (main is the standard layer)
+
+    %%%%%%%%%%%%%%%%%%%% Background %%%%%%%%%%%%%%%%%%%%%%%%
+    \fill[bg] (current page.south west) rectangle (current page.north east);
+
+    %%%%%%%%%%%%%%%%%%%% Background Polygon %%%%%%%%%%%%%%%%%%%%
+
+    % top left
+    \foreach \i in {0.5,...,20} {\drawhexagon{}{$(current page.north west)+(2.5,0)$}{\i cm}{0}{accent!60,draw};}
+
+    % bottom left
+    \foreach \i in {2.5,...,22} {\drawhexagon{}{$(current page.west)+(2.5,-5)$}{\i cm}{0}{accent!60,draw};}
+
+    % center right
+    \foreach \i in {0.5,...,22} {\drawhexagon{}{$(current page.north east)+(0,-9.5)$}{\i cm}{0}{accent!90,draw};}
+
+    \drawhexagon{\Large }{$(current page.west)+(2.5,-5)$}{2.5 cm}{0}{accent!60,draw,text=fg};
+
+    % \node[left, bg, rounded corners, minimum height=2cm, rotate=0, text=fg,anchor=east,align=right, text width=25em] at ($(current page.east)+(-0.5,-10.7)$){Venturer Camp 2023, a project by \href{https://woodcraft.org.uk}{Woodcraft Folk}, brought together 13-17 year olds from across the UK to camp together and live by the Woodcraft Folk values for a week in the summer of 2023.\\
+    % Woodcraft Folk is a registered charity in England \& Wales (1148195) and in Scotland (SC039791), and a limited company, registered in England \& Wales (8133727). Registered office: Holyoake House, Hanover Street, Manchester M60 0AS};
+
+    % bottom right
+    \foreach \i in {21} {\drawhexagon{}{$(current page.south east)+(-0.2,-0.45)$}{\i cm}{0}{accent!85,draw};}
+
+    \node[left, bg, rounded corners, minimum height=2cm, rotate=0, text=fg,anchor=east,align=right, text width=15.25em] at ($(current page.east)+(-0.5,-10.6)$){Venturer Camp 2023, a project by \href{https://woodcraft.org.uk}{Woodcraft Folk}, brought together 13-17 year olds from across the UK to camp together and live by the Woodcraft Folk values for a week in the summer of 2023.\\
+    Woodcraft Folk is a registered charity in England \& Wales (1148195) and in Scotland (SC039791), and a limited company, registered in England \& Wales (8133727). Registered office: Holyoake House, Hanover Street, Manchester M60 0AS};
+
+    \end{tikzpicture}
+\end{titlepage}
+}
+

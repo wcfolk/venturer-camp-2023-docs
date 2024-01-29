@@ -29,7 +29,12 @@ top=20mm,
 
 \usepackage{titlesec}
 \usepackage[T1]{fontenc}
-\usepackage[colorlinks=true, linkcolor=black]{hyperref}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+pdftitle={Venturer Camp 2023 Final Report \& Evaluation},
+pdfauthor={Thomas Boxall},
+pdfsubject={The final report of how the event was run and the evaluation of what went well, what didn't go so well and what we would suggest you do differently next time.}
+}
 
 \usepackage{pgf-pie}
 
@@ -38,6 +43,9 @@ top=20mm,
 \usepackage{multicol}
 \usepackage{multirow}
 \usepackage{longtable}
+
+\usepackage{appendix}
+\usepackage{pdfpages}
 
 
 \renewcommand{\arraystretch}{1.6} % make cells vertically bigger
@@ -50,9 +58,9 @@ top=20mm,
 \fancyhf{}
 \fancyhead[L]{Final Report \& Evaluation}
 \fancyhead[R]{Venturer Camp 2023}
-\fancyfoot[L]{}
-\fancyfoot[C]{\thepage}
-\fancyfoot[R]{}
+\fancyfoot[L]{\leftmark}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
 \renewcommand{\footrulewidth}{0.4pt}
 \addtolength{\topmargin}{-1.59999pt}
 \setlength{\headheight}{13.59999pt}
